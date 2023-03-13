@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://www.google.com/ -->
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="zh-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">><title>Google</title>
+<body>
+<a href=index.html>這個連結</a>會連到index<br>
+<button onclick="onclick()">點擊</button>
+<script>
+    function onclick(){
+    if (/(iPhone|iPad)/.test(navigator.userAgent)) {
+    try {
+    window.webkit.messageHandlers.showBackButton.postMessage('true');
+        //'true' or 'false'
+     } catch {
+     console.log('IOS native context does not exist');
+     }
+        } 
+}
+</script>
+</body>
+</html>
